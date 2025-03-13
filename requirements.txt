@@ -1,0 +1,4 @@
+fastapi
+uvicorn[standard]
+sse-starlette==1.6.5
+pyinstaller==5.13.0

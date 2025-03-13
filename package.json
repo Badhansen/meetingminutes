@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "install-reqs": "pnpm install && pip3 install -r requirements.txt",
+    "dev-reqs": "pip3 install -r requirements.txt",
+    "build:sidecar-winos": "pyinstaller -c -F --clean --name main-x86_64-pc-windows-msvc --distpath src-tauri/bin/api backend/main.py",
+    "build:sidecar-macos": "pyinstaller -c -F --clean --name main-aarch64-apple-darwin --distpath src-tauri/bin/api backend/main.py",
+    "build:sidecar-linux": "pyinstaller -c -F --clean --name main-x86_64-unknown-linux-gnu --distpath src-tauri/bin/api backend/main.py",
+    "build:fastapi": "pyinstaller -c -F --clean --name main-x86_64-pc-windows-msvc --distpath src-tauri/bin/api backend/main.py",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
